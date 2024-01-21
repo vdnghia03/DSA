@@ -30,13 +30,25 @@ void print(TreeNode* node) {
 }
 
 // Tim kiem va tra ve Node co gia tri val, khong co tra NULL
-TreeNode* search(TreeNode* node, int val) {
+TreeNode* search_recursive(TreeNode* node, int val) {
         if (node == NULL || node->data == val)
             return node;
         else if (val < node->data)
             return search(node->left, val);
         else if (val > node->data)
             return search(node->right, val);
+}
+
+TreeNode* search(TreeNode* node, val){
+	while(1){
+		if(node == NULL || node->data = val)
+			return node;
+		else if(val < node->data)
+			node = node->left;
+		else if(val > node->data)
+			node = node->data;
+	}
+	
 }
 
 // Khoi tao Binary Tree
